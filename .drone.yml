@@ -1,9 +1,7 @@
 pipeline:
   build:
-    image: ubuntu:latest
+    image: drone/drone:0.7
     commands:
       - echo "test--------!"
-      - apt-get update && apt-get install rsync -y && bundle exec middleman build --clean
-      - rsync -r --rsh='ssh -o LogLevel=ERROR -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i /data/id_rsa -p 22' build/* user@host:~/docs --progress --delete
     when:
       branch: master

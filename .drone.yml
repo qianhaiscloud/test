@@ -1,2 +1,5 @@
-script:
-  - echo"test."
+pipeline:
+  build:
+    image: ubuntu:latest
+    commands:
+      - echo "test!"

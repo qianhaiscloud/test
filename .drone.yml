@@ -17,8 +17,3 @@ pipeline:
     repo: octocat/hello-world
     tags: [ 1, 1.1, latest ]
     registry: index.docker.io
-
-  notify:
-    image: plugins/slack
-    channel: developers
-    username: drone

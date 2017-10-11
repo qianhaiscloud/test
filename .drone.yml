@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: drone/drone:0.7
+    image: nginx:latest
     commands:
       - echo "test--------!"
     when:
